@@ -48,16 +48,6 @@ export default {
 
 <style scoped>
 
-.container {
-  width: 320px;
-  height: 418px;
-  text-align: center;
-}
-
-.container:hover {
-  box-sizing: content-box;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
 .product-container {
 
   cursor: pointer;
@@ -76,13 +66,7 @@ export default {
 .test {
   margin-left: 300px;
 }
-.container .btn {
-  width: 310px;
-  height: 19px;
-  position: absolute;
-  text-align: right;
-  padding-top: 10px;
-}
+
 .product-text {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
@@ -101,46 +85,9 @@ export default {
   text-align: center;
   margin-top: 10px;
 }
-.product-container p {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
-  font-family: 'Roboto', sans-serif;
-}
 
-.product-container h2 {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-}
 
-.item-catalog {
-  cursor: pointer;
-  display: block;
-  position: relative;
-}
 
-.item-catalog:hover {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(154, 153, 153, 0);
-  opacity: 0.6;
-  transition: all 0.5s ease-out;
-}
-
-/*.img-content {*/
-/*  width: 320px;*/
-/*  height: 336px;*/
-/*}*/
-
-/*.img-content img {*/
-/*  max-height: 300px;*/
-/*  max-width: 300px;*/
-/*}*/
 .item-image {
   width: 320px;
   height: 336px;

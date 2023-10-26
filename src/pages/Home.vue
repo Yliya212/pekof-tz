@@ -1,5 +1,5 @@
 <template>
-  <img src="../images/ImageHome.svg"/>
+  <img src="../images/ImageHome.svg" class="catalog-img"/>
   <div class="section">
 		<div v-if="allProducts === null">
       <loader />
@@ -25,21 +25,21 @@ export default {
 
 <style>
 
-/*.section {*/
-/*  display: flex;*/
-/*  justify-content: flex-start;*/
-/*  padding: 79px 250px 112px 250px;*/
-/*}*/
+
 
 
 .catalog-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   max-width: 1400px;
   margin-left: 260px;
+  align-items: center;
   gap: 40px;
   margin-bottom: 39px;
   margin-top: 112px;
 
+}
+.catalog-img {
+  width: 100%;
 }
 </style>

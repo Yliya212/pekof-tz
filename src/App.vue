@@ -1,13 +1,15 @@
 <template>
-  <div class="main">
+
 
 
   <app-header />
-
+<div class="test1">
   <router-view />
+</div>
+
 
   <app-footer />
-  </div>
+
 </template>
 
 <script>
@@ -35,8 +37,8 @@ export default {
   color: #0A1E32;
 }
 
-app {
-  height: 100%;
-}
 
+.test1 {
+  min-height: calc(100vh - 75px) ;
+}
 </style>

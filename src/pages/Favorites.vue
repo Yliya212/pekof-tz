@@ -9,7 +9,10 @@
     <div v-else class="catalog-container" >
       <router-link v-for="product in allFavorites" :key="product" :to="`/favorites`">
         <router-link :to="`/product/${product.id}`">
-          <product-preview :product="product" :is-favorite-page="true" />
+          <div class="favorite-product">
+            <product-preview :product="product" :is-favorite-page="true" />
+          </div>
+
         </router-link>
       </router-link>
     </div>
@@ -42,7 +45,10 @@ export default {
 .text {
   margin-top: 300px;
   margin-left: 800px;
-  margin-bottom: 372px;
+  /*margin-bottom: 372px;*/
+}
+.favorite-product {
+  max-width: 330px;
 }
 
 </style>
