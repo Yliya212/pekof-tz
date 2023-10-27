@@ -28,15 +28,10 @@ export default {
 		product() {
 			return this.allProducts && this.allProducts.find((item) => item.id === +this.$route.params.id);
 		},
-    favorite() {
-      if(this.product === true) {
-        return this.product
-      }
-    }
 	},
   methods: {
-    addToFavorites(favorite) {
-      this.$store.dispatch('addToFavorites', favorite);
+    addToFavorites(product) {
+      this.$store.dispatch('addToFavorites', product);
     }
   },
 }
