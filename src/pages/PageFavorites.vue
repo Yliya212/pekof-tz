@@ -10,7 +10,7 @@
       <router-link v-for="product in allFavorites" :key="product" :to="`/favorites`">
         <router-link :to="`/product/${product.id}`">
           <div class="favorite-product">
-            <product-preview :product="product" :is-favorite-page="true" />
+            <ProductCard :product="product" :is-favorite-page="true" />
           </div>
 
         </router-link>
@@ -21,10 +21,11 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import ProductPreview from '@/components/ProductPreview';
+import ProductCard from '@/components/ProductCard';
 
 export default {
-  components: { ProductPreview },
+  name: "PageFavorites",
+  components: { ProductCard },
   computed: mapGetters(['allFavorites']),
 
 }

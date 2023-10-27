@@ -1,29 +1,22 @@
 <template>
-
-
-
-  <app-header />
-<div class="test1">
-  <router-view />
-</div>
-
-
-  <app-footer />
-
+  <Header/>
+  <div class="footer-height">
+    <router-view/>
+  </div>
+  <Footer/>
 </template>
-
 <script>
 
-import { mapActions } from 'vuex';
-import AppHeader from '@/components/Header';
-import AppFooter from '@/components/Footer';
+import {mapActions} from 'vuex';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export default {
-  components: { AppHeader, AppFooter },
-	methods: mapActions(['fetchProducts']),
-	async created() {
-		await this.fetchProducts();
-	},
+  components: {Header, Footer},
+  methods: mapActions(['fetchProducts']),
+  async created() {
+    await this.fetchProducts();
+  },
 }
 </script>
 
@@ -36,9 +29,7 @@ export default {
   text-decoration: none;
   color: #0A1E32;
 }
-
-
-.test1 {
-  min-height: calc(100vh - 75px) ;
+.footer-height {
+  min-height: calc(100vh - 75px);
 }
 </style>

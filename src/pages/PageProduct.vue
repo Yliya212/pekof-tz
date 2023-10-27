@@ -22,15 +22,21 @@
 import { mapGetters } from 'vuex';
 
 export default {
+  name: "PageProduct",
 	computed: {
 		...mapGetters(['allProducts']),
 		product() {
 			return this.allProducts && this.allProducts.find((item) => item.id === +this.$route.params.id);
-		}
+		},
+    favorite() {
+      if(this.product === true) {
+        return this.product
+      }
+    }
 	},
   methods: {
-    addToFavorites(product) {
-      this.$store.dispatch('addToFavorites', product);
+    addToFavorites(favorite) {
+      this.$store.dispatch('addToFavorites', favorite);
     }
   },
 }
@@ -40,12 +46,10 @@ export default {
 
 .link {
   margin: 33px 0 0 250px;
-  text-decoration: underline;
   text-decoration: none;
 }
 
 .link:hover {
-
   cursor: pointer;
 }
 .product-container {

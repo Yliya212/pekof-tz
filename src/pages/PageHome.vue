@@ -6,19 +6,20 @@
 		</div>
     <div v-else class="catalog-container">
       <router-link v-for="product in allProducts" :key="product.id" :to="`/product/${product.id}`">
-        <product-preview :product="product" />
+        <ProductCard :product="product" />
       </router-link>
     </div>
   </div>
 </template>
 
 <script>
-import ProductPreview from '@/components/ProductPreview';
+import ProductCard from '@/components/ProductCard';
 import { mapGetters } from 'vuex';
 import Loader from '@/components/common/Loader';
 
 export default {
-  components: { ProductPreview, Loader },
+  name: "PageHome",
+  components: { ProductCard, Loader },
   computed: mapGetters(['allProducts']),
 }
 </script>

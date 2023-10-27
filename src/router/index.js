@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '@/pages/Home';
-import Product from '@/pages/Product';
-import Favorites from '@/pages/Favorites';
+import PageHome from '@/pages/PageHome';
+import PageProduct from '@/pages/PageProduct';
+import PageFavorites from '@/pages/PageFavorites';
 
 const routes = [
-  { path: '/', component: Home },
-  { path: '/product/:id', component: Product },
-  { path: '/favorites', component: Favorites },
+  { path: '/', component: PageHome },
+  { path: '/product/:id', component: PageProduct },
+  { path: '/favorites', component: PageFavorites },
 ];
 
 const router = createRouter({
